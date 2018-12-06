@@ -1,0 +1,29 @@
+<button (click)="showOnClick()">Save</button>
+<br />
+5+5
+<br />
+{{5+5}}
+
+<input type="text" #name1="ngModel" value="" name="name" id="name" [(ngModel)]="name"/>
+<br />
+
+{{name | uppercase}}
+
+<br><br><br>
+Selected Date is :
+{{date | date:f1}}
+
+<br><br><br>
+{{10 | changeNumber:5}}
+
+<br><br><br>
+<div>
+<p>{{str}}[0:4]: '{{str | slice:0:4}}' - output is expected to be 'abcd'</p>
+    <p>{{str}}[4:0]: '{{str | slice:4:0}}' - output is expected to be ''</p>
+    <p>{{str}}[-4]: '{{str | slice:-4}}' - output is expected to be 'ghij'</p>
+    <p>{{str}}[-4:-2]: '{{str | slice:-4:-2}}' - output is expected to be 'gh'</p>
+    <p>{{str}}[-100]: '{{str | slice:-100}}' - output is expected to be 'abcdefghij'</p>
+    <p>{{str}}[100]: '{{str | slice:100}}' - output is expected to be ''</p>
+  </div>
+
+
